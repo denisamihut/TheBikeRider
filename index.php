@@ -134,7 +134,7 @@ error_reporting(0);
           <div class="fun-facts-m">
             <div class="cell">
               <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>1000+</h2>
-              <p>New Bikes For Sale</p>
+              <p>New Bikes For Rent</p>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ error_reporting(0);
           <div class="fun-facts-m">
             <div class="cell">
               <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>999+</h2>
-              <p>Used Bikes For Sale</p>
+              <p>Used Bikes For Rent</p>
             </div>
           </div>
         </div>

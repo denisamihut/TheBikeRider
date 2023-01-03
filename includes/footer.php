@@ -1,32 +1,26 @@
 <?php
-if(isset($_POST['emailsubscibe']))
-{
-$subscriberemail=$_POST['subscriberemail'];
-$sql ="SELECT SubscriberEmail FROM tblsubscribers WHERE SubscriberEmail=:subscriberemail";
-$query= $dbh -> prepare($sql);
-$query-> bindParam(':subscriberemail', $subscriberemail, PDO::PARAM_STR);
-$query-> execute();
-$results = $query -> fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query -> rowCount() > 0)
-{
-echo "<script>alert('Already Subscribed.');</script>";
-}
-else{
-$sql="INSERT INTO  tblsubscribers(SubscriberEmail) VALUES(:subscriberemail)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':subscriberemail',$subscriberemail,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-echo "<script>alert('Subscribed successfully.');</script>";
-}
-else
-{
-echo "<script>alert('Something went wrong. Please try again');</script>";
-}
-}
+if (isset($_POST['emailsubscibe'])) {
+  $subscriberemail = $_POST['subscriberemail'];
+  $sql = "SELECT SubscriberEmail FROM tblsubscribers WHERE SubscriberEmail=:subscriberemail";
+  $query = $dbh->prepare($sql);
+  $query->bindParam(':subscriberemail', $subscriberemail, PDO::PARAM_STR);
+  $query->execute();
+  $results = $query->fetchAll(PDO::FETCH_OBJ);
+  $cnt = 1;
+  if ($query->rowCount() > 0) {
+    echo "<script>alert('Already Subscribed.');</script>";
+  } else {
+    $sql = "INSERT INTO  tblsubscribers(SubscriberEmail) VALUES(:subscriberemail)";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':subscriberemail', $subscriberemail, PDO::PARAM_STR);
+    $query->execute();
+    $lastInsertId = $dbh->lastInsertId();
+    if ($lastInsertId) {
+      echo "<script>alert('Subscribed successfully.');</script>";
+    } else {
+      echo "<script>alert('Something went wrong. Please try again');</script>";
+    }
+  }
 }
 ?>
 
@@ -40,11 +34,11 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <ul>
 
 
-          <li><a href="page.php?type=aboutus">About Us</a></li>
+            <li><a href="page.php?type=aboutus">About Us</a></li>
             <li><a href="page.php?type=faqs">FAQs</a></li>
             <li><a href="page.php?type=privacy">Privacy</a></li>
-          <li><a href="page.php?type=terms">Terms of use</a></li>
-               <li><a href="admin/">Admin Login</a></li>
+            <li><a href="page.php?type=terms">Terms of use</a></li>
+            <li><a href="admin/">Admin Login</a></li>
           </ul>
         </div>
 
@@ -57,7 +51,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
               </div>
               <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form>
-            <p class="subscribed-text">*We send great deals and latest auto news to our subscribed users very week.</p>
+            <p class="subscribed-text">*We send great deals and latest bike news to our subscribed users very week.</p>
           </div>
         </div>
       </div>
@@ -70,16 +64,16 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <div class="footer_widget">
             <p>Connect with Us:</p>
             <ul>
-              <li><a href="https://code-projects.org/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://code-projects.org/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://code-projects.org/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://code-projects.org/"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://code-projects.org/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://gmail.google.com/"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="col-md-6 col-md-pull-6">
-          <p class="copy-right">Copyright &copy; 2020 Bike Rental Portal. Brought To You By <a href="https://www.campcodes.com/">CampCodes</a></p>
+          <p class="copy-right">Copyright &copy; 2022 The Bike Rider. Brought To You By Denisa Mihut</a></p>
         </div>
       </div>
     </div>
