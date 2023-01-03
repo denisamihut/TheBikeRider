@@ -14,7 +14,7 @@ error_reporting(0);
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <title>Bike Rental Portal</title>
+  <title>The Bike Rider</title>
   <!--Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
@@ -56,7 +56,7 @@ error_reporting(0);
           <div class="banner_content">
             <h1>Find Your Perfect bike</h1>
             <p>We have more than a thousand bikes for you to choose. </p>
-            <a href="#" class="btn">Read More <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+           
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ error_reporting(0);
   <section class="section-padding gray-bg">
     <div class="container">
       <div class="section-header text-center">
-        <h2>Find the Best <span>Bike For You</span></h2>
+        <h2><span>Find the Best Bike For You</span></h2>
         <p>You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes with best deals</p>
       </div>
       <div class="row">
@@ -77,7 +77,7 @@ error_reporting(0);
         <!-- Nav tabs -->
         <div class="recent-tab">
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">New Bike</a></li>
+            <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">New Offers</a></li>
           </ul>
         </div>
         <!-- Recently Listed New Cars -->
